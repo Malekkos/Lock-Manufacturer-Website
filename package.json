@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Malekkos/Lock-Manufacturer-Website#readme",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "jquery": "^3.7.1"
   }
 }
