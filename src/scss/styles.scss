@@ -1,7 +1,48 @@
 @import "bootstrap/scss/bootstrap";
 
 // I might need a boilerplate preliminary thing for this project, idk yet.
+$maxwidth: 100vw;
+$backgroundcolor: #373737;
 
-// #firsttext {
-//   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+#root {
+  width: $maxwidth;
+  height: 100vh;
+  background-color: $backgroundcolor;
+}
+
+#lock-handle {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  position: relative;
+  .left-arc, .right-arc {
+    height: 20rem;
+    width: 30vw;
+    color: #cdcdcd;
+    border-color: #c0c0c0;
+    border-style: solid;
+    border-width: 1.5rem;
+    border-bottom: none;
+  }
+
+  .left-arc {
+    border-right: none;
+    border-top-left-radius: 90% 80%;
+  }
+  .right-arc {
+    border-left: none;
+    border-top-right-radius: 90% 80%;
+  }
+  
+}
+
+
+
+// .right-arc {
+//   color: black;
+//   height: 20rem;
+//   width: 50vw;
+//   border-color: black;
+//   border-style: solid;
+//   border-width: 0.5rem;
 // }

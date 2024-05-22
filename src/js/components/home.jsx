@@ -8,7 +8,13 @@ function Home () {
 
   return (
     <div>
-      <h1>Hello</h1>
+      <div id="lock-handle">
+        <div className="left-arc"></div>
+        <div className="right-arc"></div>
+      </div>
+      {/* <div id="proj-explanation">
+        <h4> This is a test paragraph AHAHHAHA</h4>
+      </div> */}
     </div>
   )
 }
