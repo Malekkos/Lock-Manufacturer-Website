@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["demo", "website", "lock"],
+  "keywords": [
+    "demo",
+    "website",
+    "lock"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Malekkos/Lock-Manufacturer-Website.git"
@@ -16,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Malekkos/Lock-Manufacturer-Website/issues"
   },
-  "homepage": "https://github.com/Malekkos/Lock-Manufacturer-Website#readme"
+  "homepage": "https://github.com/Malekkos/Lock-Manufacturer-Website#readme",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
 }
