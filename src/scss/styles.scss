@@ -11,10 +11,13 @@ $backgroundcolor: #373737;
 }
 
 #lock-handle {
+  width: $maxwidth;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  z-index: 0;
+
   .left-arc, .right-arc {
     height: 20rem;
     width: 30vw;
@@ -33,16 +36,37 @@ $backgroundcolor: #373737;
     border-left: none;
     border-top-right-radius: 90% 80%;
   }
-  
 }
 
+#proj-explanation {
+  display: flex;
+  justify-content: center;
+  top: 8.5rem;
+  position: relative;
+  z-index: 10;
 
+}
+.text {
+  width: 35vw;
+  font-size: calc(3vw - 16px);
+}
 
-// .right-arc {
-//   color: black;
-//   height: 20rem;
-//   width: 50vw;
-//   border-color: black;
-//   border-style: solid;
-//   border-width: 0.5rem;
-// }
+@media screen and (max-width: 1129px) {
+  
+  .text {
+    font-size: calc(3vw - 11px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .text {
+    font-size: calc(3vw - 4px);
+  }
+}
+@media screen and (max-width: 630px) {
+  
+  .text {
+    font-size: calc(3vw - 1px);
+  }
+}
