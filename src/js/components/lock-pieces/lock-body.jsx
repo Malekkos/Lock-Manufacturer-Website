@@ -8,7 +8,9 @@ function Body () {
 
   return (
     <>
-      <h4>I am the body</h4>
+      <div id="lock-body">
+
+      </div>
     </>
   )
 }

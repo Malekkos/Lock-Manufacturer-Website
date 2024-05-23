@@ -5,8 +5,11 @@ $maxwidth: 100vw;
 $backgroundcolor: #373737;
 
 #root {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   width: $maxwidth;
-  height: 100vh;
+  height: 150vh;
   background-color: $backgroundcolor;
 }
 
@@ -51,6 +54,21 @@ $backgroundcolor: #373737;
   font-size: calc(3vw - 16px);
 }
 
+#lock-body {
+  // display: flex;
+  z-index: 1;
+  position: absolute;
+  top: 20rem;
+  width: 80%;
+  height: 45rem;
+  background-color: #dfdffa;
+  opacity: 0.8;
+  background-image: linear-gradient(0deg, #dfdffa 83%, #b6b6cc 17%);
+  background-size: 22px 22px;
+  background-clip: border-box;
+}
+
+//////////////////////////////////////////////////
 @media screen and (max-width: 1129px) {
   
   .text {
@@ -72,10 +90,3 @@ $backgroundcolor: #373737;
 }
 
 
-/*
-background-color: #e5e5f7;
-opacity: 0.8;
-background-image: linear-gradient(0deg, #e5e5f7 50%, #444cf7 50%);
-background-size: 10px 10px;
-
-*/
