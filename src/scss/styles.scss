@@ -55,7 +55,12 @@ $backgroundcolor: #373737;
 }
 
 #lock-body {
-  // display: flex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
   z-index: 1;
   position: absolute;
   top: 20rem;
