@@ -9,9 +9,9 @@ function Body () {
   return (
     <>
       <div id="lock-body">
-        <BSCarousel />
-        <BSCarousel />
-        <BSCarousel />
+        <BSCarousel carousel_id={1}/>
+        <BSCarousel carousel_id={2}/>
+        <BSCarousel carousel_id={3}/>
         <OrgCarousel />
         <OrgCarousel />
         <OrgCarousel />

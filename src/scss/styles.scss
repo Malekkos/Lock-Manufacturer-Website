@@ -80,16 +80,27 @@ $backgroundcolor: #373737;
 
 .carousel-inner {
   display: flex;
+  background-color: white;
   align-items: center;
   justify-content: center;
   align-self: center;
   justify-items: center;
+
+}
+
+.special {
+  border: 8px rgb(42, 142, 189);
+  border-style:ridge;
 }
 
 .carousel-item, .active, .carousel-item-prev, .carousel-item-start, .carousel-item-end {
-  // display: flex;
   margin-right: 0;
-  width: 15rem;
+  width: 11rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 2rem;
+  background-color: black;
 }
 
 //////////////////////////////////////////////////
