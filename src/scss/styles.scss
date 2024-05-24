@@ -73,12 +73,10 @@ $backgroundcolor: #373737;
   background-clip: border-box;
 }
 
-// .carousel {
-//   display: flex;
-//   flex-flow: column nowrap;
-//   align-items: center;
-//   justify-content: center;
-// }
+#carouselExample {
+  display: flex;
+  flex-flow: column nowrap;
+}
 
 .carousel-inner {
   display: flex;
@@ -90,8 +88,8 @@ $backgroundcolor: #373737;
 
 .carousel-item, .active, .carousel-item-prev, .carousel-item-start, .carousel-item-end {
   // display: flex;
-  width: 50%;
-  height: 50%;
+  margin-right: 0;
+  width: 15rem;
 }
 
 //////////////////////////////////////////////////
