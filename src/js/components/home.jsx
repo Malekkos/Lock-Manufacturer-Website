@@ -6,7 +6,7 @@ import Body from "./lock-pieces/lock-body";
 
 
 
-function Home () {
+function Home() {
 
   return (
     <>

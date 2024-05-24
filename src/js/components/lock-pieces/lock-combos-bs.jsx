@@ -22,7 +22,6 @@ import React from "react";
 function BSCarousel(id) {
 
   const { carousel_id } = id
-  console.log(carousel_id)
 
   return (
     <>
