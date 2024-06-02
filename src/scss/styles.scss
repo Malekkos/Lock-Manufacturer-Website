@@ -35,6 +35,7 @@ $backgroundcolor: #373737;
     border-right: none;
     border-top-left-radius: 90% 80%;
   }
+
   .right-arc {
     border-left: none;
     border-top-right-radius: 90% 80%;
@@ -47,8 +48,8 @@ $backgroundcolor: #373737;
   top: 8.5rem;
   position: relative;
   z-index: 10;
-
 }
+
 .text {
   width: 30rem;
   font-size: calc(3vw - 16px);
@@ -86,7 +87,7 @@ $backgroundcolor: #373737;
   justify-content: center;
   align-self: center;
   justify-items: center;
-
+  
   .carousel-item{ 
     width: 11rem;
   }
@@ -108,8 +109,8 @@ $backgroundcolor: #373737;
   width: 2rem;
   background-color: black;
   background: none; 
-  
-  .carousel-control-next-icon, .carousel-control-prev-icon{
+
+  .carousel-control-next-icon, .carousel-control-prev-icon {
     width: 1.4rem;
     background-size: 1.4rem;
     opacity: 0.8;
@@ -120,10 +121,12 @@ $backgroundcolor: #373737;
   .carousel-control-prev {
     justify-content: start;
   }
+
   .carousel-control-next {
     justify-content: end;
   }
 }
+
 .carousel-item-start, .carousel-item-end {
   width: 20rem
 }
