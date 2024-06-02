@@ -79,12 +79,17 @@ $backgroundcolor: #373737;
 }
 
 .carousel-inner {
+  width: 100%;
   display: flex;
   background-color: white;
   align-items: center;
   justify-content: center;
   align-self: center;
   justify-items: center;
+
+  .carousel-item{ 
+    width: 11rem;
+  }
 }
 
 .special {
@@ -92,7 +97,7 @@ $backgroundcolor: #373737;
   border-style:ridge;
 }
 
-.carousel-item, .active, .carousel-item-prev, .carousel-item-start, .carousel-item-end {
+.active, .carousel-item-prev, .carousel-item-next, .carousel-item-end, .carousel-item-start {
   margin-right: 0;
   width: 11rem;
 }
@@ -103,6 +108,7 @@ $backgroundcolor: #373737;
   width: 2rem;
   background-color: black;
   background: none; 
+  
   .carousel-control-next-icon, .carousel-control-prev-icon{
     width: 1.4rem;
     background-size: 1.4rem;
@@ -110,14 +116,17 @@ $backgroundcolor: #373737;
     background-color: rgb(42, 142, 189);
     }
   }
+
   .carousel-control-prev {
-  justify-content: start;
+    justify-content: start;
   }
   .carousel-control-next {
     justify-content: end;
   }
 }
-
+.carousel-item-start, .carousel-item-end {
+  width: 20rem
+}
 
 //////////////////////////////////////////////////
 @media screen and (max-width: 1129px) {
