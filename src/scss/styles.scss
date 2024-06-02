@@ -85,7 +85,6 @@ $backgroundcolor: #373737;
   justify-content: center;
   align-self: center;
   justify-items: center;
-
 }
 
 .special {
@@ -104,21 +103,21 @@ $backgroundcolor: #373737;
   width: 2rem;
   background-color: black;
   background: none; 
-}
+  .carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 1.4rem;
+    background-size: 1.4rem;
+    opacity: 0.8;
+    background-color: rgb(42, 142, 189);
+    }
+  }
   .carousel-control-prev {
   justify-content: start;
-}
+  }
   .carousel-control-next {
     justify-content: end;
   }
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon{
-  width: 1.4rem;
-  background-size: 1.4rem;
-  opacity: 0.8;
-  background-color: rgb(42, 142, 189);
-}
 
 //////////////////////////////////////////////////
 @media screen and (max-width: 1129px) {
