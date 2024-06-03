@@ -5,7 +5,9 @@ import BSCarousel from "./lock-combos-bs"
 
 
 function Body() {
-
+  /*
+    Take in the dummy data here, when its created, and then take a specific portion containing the image's and whatnot and pass it down through the components
+  */
   return (
     <>
       <div id="lock-body">

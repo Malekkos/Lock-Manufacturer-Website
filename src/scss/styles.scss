@@ -2,7 +2,8 @@
 @import "bootstrap/dist/css/bootstrap.css";
 // I might need a boilerplate preliminary thing for this project, idk yet.
 $maxwidth: 100vw;
-$backgroundcolor: #373737;
+$backgroundcolor: #E38F83;
+$maincolor: #2AABBD;
 
 #root {
   display: flex;
@@ -53,6 +54,15 @@ $backgroundcolor: #373737;
 .text {
   width: 30rem;
   font-size: calc(3vw - 16px);
+  color: #BD3C2A;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  text-decoration-line: underline;
+  color: inherit;
 }
 
 #lock-body {
@@ -68,7 +78,7 @@ $backgroundcolor: #373737;
   width: 45rem;
   height: 45rem;
   background-color: #dfdffa;
-  opacity: 0.7;
+  opacity: 1;
   background-image: linear-gradient(0deg, #dfdffa 57%, #b6b6cc 43%);
   background-size: 33px 6px;
   background-clip: border-box;
@@ -94,7 +104,7 @@ $backgroundcolor: #373737;
 }
 
 .special {
-  border: 8px rgb(42, 142, 189);
+  border: 8px $maincolor;
   border-style:ridge;
 }
 
@@ -113,8 +123,8 @@ $backgroundcolor: #373737;
   .carousel-control-next-icon, .carousel-control-prev-icon {
     width: 1.4rem;
     background-size: 1.4rem;
-    opacity: 0.8;
-    background-color: rgb(42, 142, 189);
+    opacity: 0.9;
+    background-color: $maincolor;
     }
   }
 
