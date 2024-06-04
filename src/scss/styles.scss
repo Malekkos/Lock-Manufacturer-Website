@@ -22,7 +22,8 @@ $maincolor: #2AABBD;
   position: absolute;
   z-index: 0;
 
-  .left-arc, .right-arc {
+  .left-arc,
+  .right-arc {
     height: 20rem;
     width: 20rem;
     color: #cdcdcd;
@@ -55,7 +56,7 @@ $maincolor: #2AABBD;
   width: 30rem;
   font-size: calc(3vw - 16px);
   color: #BD3C2A;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
 }
 
@@ -90,49 +91,63 @@ $maincolor: #2AABBD;
 }
 
 //TBD if we need the fourth fifth and sixth selector, it depends on how I plan to build out the original carousel and if they need a pointer like an ID
-#first, #second, #third, #fourth, #fifth, #sixth {
-.carousel-inner {
-  width: 100%;
-  display: flex;
-  background-color: white;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  justify-items: center;
-  
-  .carousel-item{ 
-    width: 11rem;
+#first,
+#second,
+#third,
+#fourth,
+#fifth,
+#sixth {
+  .carousel-inner {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-items: center;
+
+    .carousel-item {
+      width: 11rem;
     }
 
-  .special {
-    border: 8px $maincolor;
-    border-style:ridge;
+    .special {
+      border: 8px $maincolor;
+      border-style: ridge;
     }
-  
-  .active, .carousel-item-prev, .carousel-item-next, .carousel-item-end, .carousel-item-start {
-    margin-right: 0;
-    width: 11rem;
+
+    .active,
+    .carousel-item-prev,
+    .carousel-item-next,
+    .carousel-item-end,
+    .carousel-item-start {
+      margin-right: 0;
+      width: 11rem;
     }
-  
-  .carousel-item-next, .carousel-item-prev{
-    position:absolute;
+
+    .carousel-item-next,
+    .carousel-item-prev {
+      position: absolute;
     }
   }
 }
 
+#first,
+#second,
+#third {
 
-#first, #second, #third{
-  .carousel-control-prev, .carousel-control-next {
-  display: grid;
-  width: 2rem;
-  background-color: black;
-  background: none; 
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: grid;
+    width: 2rem;
+    background-color: black;
+    background: none;
 
-  .carousel-control-next-icon, .carousel-control-prev-icon {
-    width: 1.4rem;
-    background-size: 1.4rem;
-    opacity: 0.9;
-    background-color: $maincolor;
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      width: 1.4rem;
+      background-size: 1.4rem;
+      opacity: 0.9;
+      background-color: $maincolor;
     }
   }
 
@@ -147,7 +162,7 @@ $maincolor: #2AABBD;
 
 //////////////////////////////////////////////////
 @media screen and (max-width: 1129px) {
-  
+
   .text {
     font-size: calc(3vw - 11px);
   }
@@ -159,11 +174,10 @@ $maincolor: #2AABBD;
     font-size: calc(3vw - 4px);
   }
 }
+
 @media screen and (max-width: 630px) {
-  
+
   .text {
     font-size: calc(3vw - 1px);
   }
 }
-
-
