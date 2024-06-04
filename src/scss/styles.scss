@@ -1,10 +1,28 @@
-@import "bootstrap/scss/bootstrap";
-@import "bootstrap/dist/css/bootstrap.css";
+/// @import "bootstrap/scss/bootstrap";
+/// @import "bootstrap/dist/css/bootstrap.css";
+/// @author Christian Anderson
+///
+
+// Apparently, You should only nest maybe once or twice, as it takes up time when rendering
+
+// @mixin column-flex-rules {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// @mixin row-flex-rules {
+//   @include column-flex-rules;
+//   flex-flow: row nowrap
+// }
+
 // I might need a boilerplate preliminary thing for this project, idk yet.
 $maxwidth: 100vw;
 $backgroundcolor: #E38F83;
 $maincolor: #2AABBD;
 
+//DESC: Defining the flow of the page and background.
 #root {
   display: flex;
   flex-flow: column nowrap;
@@ -14,6 +32,11 @@ $maincolor: #2AABBD;
   background-color: $backgroundcolor;
 }
 
+//DESC: Defining the location and format of the overal handle area.
+//THOUGHTS: I've since reneged on my thoughts that there be no nav bar, mostly
+// cont.    because I need a portal to the shopping cart and hence, a method back.
+// cont.    The concern is that position on this is absolute. Good chance I'll
+// cont.    have to go back and fiddle with this to make it work with the nav bar.
 #lock-handle {
   width: $maxwidth;
   display: flex;
@@ -22,6 +45,8 @@ $maincolor: #2AABBD;
   position: absolute;
   z-index: 0;
 
+  //DESC: Styling for the arc components, there are two because I don't know how
+  // cont.I am supposed to make a full arc with one object. Doesn't seem possible.
   .left-arc,
   .right-arc {
     height: 20rem;
@@ -33,39 +58,53 @@ $maincolor: #2AABBD;
     border-bottom: none;
   }
 
+  //DESC: The method to make the left arc bend
   .left-arc {
     border-right: none;
     border-top-left-radius: 90% 80%;
   }
 
+  //DESC: The method to make the right arc bend
   .right-arc {
     border-left: none;
     border-top-right-radius: 90% 80%;
   }
 }
 
+//DESC: Defined container for the project explanation text
 #proj-explanation {
   display: flex;
   justify-content: center;
   top: 8.5rem;
   position: relative;
   z-index: 10;
+
+  //DESC: The text inside of the project explanation, given
+  // cont.basic styling and a calc for font-size. I could
+  // cont.probably use a better rule for the font-size, say
+  // cont.checking screen width when running the calcuation
+  // cont.rather than a static value(probably not standard
+  // cont.nor intended to give it a static value anyways)
+  .text {
+    width: 30rem;
+    font-size: calc(3vw - 16px);
+    color: #BD3C2A;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+  }
 }
 
-.text {
-  width: 30rem;
-  font-size: calc(3vw - 16px);
-  color: #BD3C2A;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: center;
-}
 
+//DESC: Selector to remove styling like blue text and underline.
 .link {
   text-decoration: none;
   text-decoration-line: underline;
-  color: inherit;
+  color: inherit or $maincolor;
 }
 
+//DESC: Stylings for the lock body, below the handle.
+//THOUGHTS: Doesn't really look all the much like a real
+// cont.    lock body, but it's a little hard to do that
 #lock-body {
   display: flex;
   flex-flow: column nowrap;
@@ -85,18 +124,18 @@ $maincolor: #2AABBD;
   background-clip: border-box;
 }
 
-#carouselExample {
-  display: flex;
-  flex-flow: column nowrap;
-}
-
 //TBD if we need the fourth fifth and sixth selector, it depends on how I plan to build out the original carousel and if they need a pointer like an ID
+//DESC: Stylings needed for the various carousels in the project.
+// cont.This encapsulates currently 3, possibly six carousels.
 #first,
 #second,
 #third,
 #fourth,
 #fifth,
 #sixth {
+
+  //DESC: Styling for the parent element of all the individual carousel items,
+  // cont.comprised mostly of spacing rules
   .carousel-inner {
     width: 100%;
     display: flex;
@@ -106,15 +145,21 @@ $maincolor: #2AABBD;
     align-self: center;
     justify-items: center;
 
+    //DESC: Styling for each carousel item, defines its width and border.
     .carousel-item {
       width: 11rem;
+      border: 6px solid silver;
     }
 
+    //DESC: Defined for the special on-sale item, gives it a different
+    // cont.border color and border style
     .special {
       border: 8px $maincolor;
       border-style: ridge;
     }
 
+    //DESC: Sets the properties of the various carousel item changes,
+    // cont.this is required for the Bootstrap method to not deform
     .active,
     .carousel-item-prev,
     .carousel-item-next,
@@ -124,6 +169,7 @@ $maincolor: #2AABBD;
       width: 11rem;
     }
 
+    //DESC: Fix for a issue of deforming the carousel items when switching
     .carousel-item-next,
     .carousel-item-prev {
       position: absolute;
@@ -131,10 +177,12 @@ $maincolor: #2AABBD;
   }
 }
 
+//DESC: General selector for the carousel control buttons
 #first,
 #second,
 #third {
 
+  //DESC: Changes the left and right bars of the carousel buttons
   .carousel-control-prev,
   .carousel-control-next {
     display: grid;
@@ -142,6 +190,7 @@ $maincolor: #2AABBD;
     background-color: black;
     background: none;
 
+    //DESC: Changes the actual icons, aka the elements inside of the bars
     .carousel-control-next-icon,
     .carousel-control-prev-icon {
       width: 1.4rem;
@@ -149,35 +198,52 @@ $maincolor: #2AABBD;
       opacity: 0.9;
       background-color: $maincolor;
     }
+
   }
 
+  //DESC: Method to push the left button to the edge
+  //THOUGHTS: For some reason, this selector and the
+  // cont.    one below it do not like to be nested
+  // cont.    in the above selector. I dont know why
   .carousel-control-prev {
     justify-content: start;
   }
 
+  //DESC: Method to push the right button to the edge
   .carousel-control-next {
     justify-content: end;
   }
+
 }
 
 //////////////////////////////////////////////////
 @media screen and (max-width: 1129px) {
 
-  .text {
-    font-size: calc(3vw - 11px);
+  //DESC: styling to make the text appear larger with screen changes,
+  // cont. I can probably refine this to a single line in the future.
+  //THOUGHTS: Interestingly, when you nest objects in a SASS architecture,
+  // cont.    you have to make it consistent with its styling heiarchy. In
+  // cont.    this case, I now need to include proj-explanation due to using
+  // cont.    it in an above element. I don't know why this happens.
+  #proj-explanation {
+    .text {
+      font-size: calc(3vw - 11px);
+    }
   }
 }
 
 @media screen and (max-width: 900px) {
-
-  .text {
-    font-size: calc(3vw - 4px);
+  #proj-explanation {
+    .text {
+      font-size: calc(3vw - 4px);
+    }
   }
 }
 
 @media screen and (max-width: 630px) {
-
-  .text {
-    font-size: calc(3vw - 1px);
+  #proj-explanation {
+    .text {
+      font-size: calc(3vw - 1px);
+    }
   }
 }
