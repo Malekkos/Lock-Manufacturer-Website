@@ -3,8 +3,6 @@
 /// @author Christian Anderson
 ///
 
-// Apparently, You should only nest maybe once or twice, as it takes up time when rendering
-
 @mixin column-flex-rules {
   display: flex;
   flex-flow: column nowrap;
@@ -50,10 +48,12 @@ $maincolor: #2AABBD;
     height: 20rem;
     width: 20rem;
     color: #cdcdcd;
-    border-color: #c0c0c0;
-    border-style: solid;
-    border-width: 1.5rem;
-    border-bottom: none;
+    border: {
+      color: #c0c0c0;
+      style: solid;
+      width: 1.5rem;
+      bottom: none;
+    }
   }
 
   //DESC: The method to make the left arc bend
@@ -117,9 +117,11 @@ $maincolor: #2AABBD;
   height: 45rem;
   background-color: #dfdffa;
   opacity: 1;
-  background-image: linear-gradient(0deg, #dfdffa 57%, #b6b6cc 43%);
-  background-size: 33px 6px;
-  background-clip: border-box;
+  background: {
+    image: linear-gradient(0deg, #dfdffa 57%, #b6b6cc 43%);
+    size: 33px 6px;
+    clip: border-box;
+  }
 }
 
 //TBD if we need the fourth fifth and sixth selector, it depends on how I plan to build out the original carousel and if they need a pointer like an ID
@@ -183,7 +185,6 @@ $maincolor: #2AABBD;
   .carousel-control-next {
     display: grid;
     width: 2rem;
-    background-color: black;
     background: none;
 
     //DESC: Changes the actual icons, aka the elements inside of the bars
