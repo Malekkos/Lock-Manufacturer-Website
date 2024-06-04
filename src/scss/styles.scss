@@ -89,6 +89,8 @@ $maincolor: #2AABBD;
   flex-flow: column nowrap;
 }
 
+//TBD if we need the fourth fifth and sixth selector, it depends on how I plan to build out the original carousel and if they need a pointer like an ID
+#first, #second, #third, #fourth, #fifth, #sixth {
 .carousel-inner {
   width: 100%;
   display: flex;
@@ -100,22 +102,24 @@ $maincolor: #2AABBD;
   
   .carousel-item{ 
     width: 11rem;
+    }
+
+  .special {
+    border: 8px $maincolor;
+    border-style:ridge;
+    }
+  
+  .active, .carousel-item-prev, .carousel-item-next, .carousel-item-end, .carousel-item-start {
+    margin-right: 0;
+    width: 11rem;
+    }
+  
+  .carousel-item-next, .carousel-item-prev{
+    position:absolute;
+    }
   }
 }
 
-.special {
-  border: 8px $maincolor;
-  border-style:ridge;
-}
-
-.active, .carousel-item-prev, .carousel-item-next, .carousel-item-end, .carousel-item-start {
-  margin-right: 0;
-  width: 11rem;
-}
-
-.carousel-item-next, .carousel-item-prev{
-  position:absolute;
-}
 
 #first, #second, #third{
   .carousel-control-prev, .carousel-control-next {
@@ -139,10 +143,6 @@ $maincolor: #2AABBD;
   .carousel-control-next {
     justify-content: end;
   }
-}
-
-.carousel-item-start, .carousel-item-end {
-  width: 20rem
 }
 
 //////////////////////////////////////////////////
