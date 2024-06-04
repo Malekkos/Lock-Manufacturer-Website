@@ -5,17 +5,16 @@
 
 // Apparently, You should only nest maybe once or twice, as it takes up time when rendering
 
-// @mixin column-flex-rules {
-//   display: flex;
-//   flex-flow: column nowrap;
-//   align-items: center;
-//   justify-content: center;
-// }
+@mixin column-flex-rules {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
 
-// @mixin row-flex-rules {
-//   @include column-flex-rules;
-//   flex-flow: row nowrap
-// }
+@mixin row-flex-rules {
+  @include column-flex-rules();
+  flex-flow: row nowrap
+}
 
 // I might need a boilerplate preliminary thing for this project, idk yet.
 $maxwidth: 100vw;
@@ -24,9 +23,8 @@ $maincolor: #2AABBD;
 
 //DESC: Defining the flow of the page and background.
 #root {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  @include column-flex-rules();
+
   width: $maxwidth;
   height: 150vh;
   background-color: $backgroundcolor;
@@ -38,10 +36,10 @@ $maincolor: #2AABBD;
 // cont.    The concern is that position on this is absolute. Good chance I'll
 // cont.    have to go back and fiddle with this to make it work with the nav bar.
 #lock-handle {
-  width: $maxwidth;
-  display: flex;
-  flex-flow: row nowrap;
+  @include row-flex-rules();
+
   justify-content: center;
+  width: $maxwidth;
   position: absolute;
   z-index: 0;
 
@@ -73,8 +71,8 @@ $maincolor: #2AABBD;
 
 //DESC: Defined container for the project explanation text
 #proj-explanation {
-  display: flex;
-  justify-content: center;
+  @include column-flex-rules();
+
   top: 8.5rem;
   position: relative;
   z-index: 10;
@@ -106,8 +104,8 @@ $maincolor: #2AABBD;
 //THOUGHTS: Doesn't really look all the much like a real
 // cont.    lock body, but it's a little hard to do that
 #lock-body {
-  display: flex;
-  flex-flow: column nowrap;
+  @include column-flex-rules();
+
   justify-content: space-evenly;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -137,13 +135,11 @@ $maincolor: #2AABBD;
   //DESC: Styling for the parent element of all the individual carousel items,
   // cont.comprised mostly of spacing rules
   .carousel-inner {
+    @include column-flex-rules();
+
     width: 100%;
     display: flex;
     background-color: white;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    justify-items: center;
 
     //DESC: Styling for each carousel item, defines its width and border.
     .carousel-item {
