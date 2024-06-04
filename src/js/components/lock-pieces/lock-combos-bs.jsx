@@ -26,7 +26,7 @@ function BSCarousel(id) {
   return (
     <>
       <div>
-        <div id={carousel_id} className="carousel slide carousel-fade">
+        <div id={carousel_id} className="carousel slide">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img src="https://cdn.masterlock.com/product/orig/MLCOM_PRODUCT_5.jpg" className="d-block w-100" alt="Standard silver lock with keys" />

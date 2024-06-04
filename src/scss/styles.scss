@@ -113,6 +113,10 @@ $maincolor: #2AABBD;
   width: 11rem;
 }
 
+.carousel-item-next, .carousel-item-prev{
+  position:absolute;
+}
+
 #first, #second, #third{
   .carousel-control-prev, .carousel-control-next {
   display: grid;
