@@ -1,41 +1,43 @@
 
 const lock = {
   bootstrapCarousel: {
-    id: 1,
+    id: "first",
     lockData: [
-      lockOne = {
-        img: "",
-        alt: "",
+      {
+        active: true,
+        img: "https://cdn.masterlock.com/product/orig/MLCOM_PRODUCT_5.jpg",
+        alt: "Standard silver lock with keys",
       },
-      lockTwo = {
-        img: "",
-        alt: "",
+      {
+        special: true,
+        img: "https://cdn.masterlock.com/product/285/MLCOM_PRODUCT_6121.jpg",
+        alt: "Large lock with black body, ProSeries",
       },
-      lockThree = {
-        img: "",
-        alt: "",
+      {
+        img: "https://cdn.masterlock.com/product/285/MLCOM_PRODUCT_6271.jpg",
+        alt: "Fully circular lock, silvery",
       },
-      lockFour = {
-        img: "",
-        alt: "",
+      {
+        img: "https://cdn.masterlock.com/product/285/MLCOM_PRODUCT_A700.jpg",
+        alt: "Dumbell shaped lock, silvery",
       },
-      lockFive = {
-        img: "",
-        alt: "",
+      {
+        img: "https://cdn.masterlock.com/product/285/MLCOM_PRODUCT_101.jpg",
+        alt: "Thin lock with key, large loop on top",
       },
-      lockSix = {
-        img: "",
-        alt: "",
+      {
+        img: "https://cdn.masterlock.com/product/285/MLCOM_PRODUCT_1UP.jpg",
+        alt: "Standard silver lock, blue lining on the bottom",
       }
     ],
   },
   bootstrapCarouselIndicators: {
-    id: 2,
+    id: "second",
     img: "",
     indicators: true,
   },
   bootstrapCarouselCaptions: {
-    id: 3,
+    id: "third",
     img: "",
     captions: true,
   }
