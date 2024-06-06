@@ -21,12 +21,20 @@ import React from "react";
 
 function BSCarousel(id) {
 
-  const { carousel_id } = id
-
+  const { carousel_id } = id;
+  let indicators = true;
   return (
     <>
       <div>
         <div id={carousel_id} className="carousel slide">
+          { indicators ? <div class="carousel-indicators"> 
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          </div> : null }
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img src="https://cdn.masterlock.com/product/orig/MLCOM_PRODUCT_5.jpg" className="d-block w-100" alt="Standard silver lock with keys" />
