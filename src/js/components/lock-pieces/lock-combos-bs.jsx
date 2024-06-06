@@ -20,27 +20,23 @@ import React from "react";
 
 
 function BSCarousel(carousel) {
-  console.log(carousel.carousel)
-  const { id, lockData } = carousel.carousel;
-  let indicators = false;
+  const { id, lockData, indicators } = carousel.carousel;
   return (
     <>
       <div>
         <div id={id} className="carousel slide">
-          { indicators ? <div class="carousel-indicators"> 
+          {indicators === true ? <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-          </div> : null }
+          </div> : null}
           <div className="carousel-inner">
-            { lockData.map((item, key) => {
-              console.log(key)
-              console.log("this is the item:", item)
+            {lockData.map((item, key) => {
               return (
-                <div key={key} className={`carousel-item ${item.active ? "active ": ""}${item.special ? "special " : ""}`}>
+                <div key={key} className={`carousel-item ${item.active ? "active " : ""}${item.special ? "special " : ""}`}>
                   <img src={item.img} className="d-block w-100" alt={item.alt} />
                 </div>
               )

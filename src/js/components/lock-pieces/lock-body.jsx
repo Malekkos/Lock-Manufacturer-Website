@@ -9,7 +9,6 @@ function Body() {
   /*
     Take in the dummy data here, when its created, and then take a specific portion containing the image's and whatnot and pass it down through the components
   */
-  // console.log(lock.bootstrapCarousel)
 
   return (
     <>
