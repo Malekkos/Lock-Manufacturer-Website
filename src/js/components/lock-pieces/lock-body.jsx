@@ -14,8 +14,8 @@ function Body() {
     <>
       <div id="lock-body">
         <BSCarousel carousel={lock.bootstrapCarousel} />
-        {/* <BSCarousel carousel_id={"second"} /> */}
-        {/* <BSCarousel carousel_id={"third"} /> */}
+        <BSCarousel carousel={lock.bootstrapCarouselIndicators} />
+        {/* <BSCarousel carousel={lock.bootstrapCarouselFade} /> */}
         <OrgCarousel />
         <OrgCarousel />
         <OrgCarousel />

@@ -1,5 +1,7 @@
 
+
 const lock = {
+
   bootstrapCarousel: {
     id: "first",
     lockData: [
@@ -31,15 +33,23 @@ const lock = {
       }
     ],
   },
+  //need to change indicator color, kinda invisible
   bootstrapCarouselIndicators: {
     id: "second",
-    img: "",
     indicators: true,
+    lockData: [
+      {
+        active: true,
+        img: "../images/Combo1500KA.jpg",
+        alt: "",
+      },
+    ]
   },
-  bootstrapCarouselCaptions: {
+
+  bootstrapCarouselFade: {
     id: "third",
-    img: "",
-    captions: true,
+    fade: true,
+
   }
 
 }
