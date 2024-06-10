@@ -43,6 +43,27 @@ const lock = {
         img: "../images/Combo1500KA.jpg",
         alt: "",
       },
+      {
+        img: "../images/Combo1525.jpg",
+        alt: "",
+      },
+      {
+        img: "../images/Combo1630.jpg",
+        alt: "",
+      },
+      {
+        img: "../images/Combo3670.jpg",
+        alt: "",
+      },
+      {
+        img: "../images/Combo1174.jpg",
+        alt: "",
+      },
+      {
+        special: true,
+        img: "../images/Combo1502GRN.jpg",
+        alt: "",
+      }
     ]
   },
 
