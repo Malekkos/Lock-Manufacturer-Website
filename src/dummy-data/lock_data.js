@@ -73,29 +73,29 @@ const lock = {
     lockData: [
       {
         active: true,
-        img: "../images/Combo1500KA.jpg",
-        alt: "Standard dial lock, circular",
+        img: "../images/Electronic5440EC.jpg",
+        alt: "Electronic lock, numbers 0 to 9 for password",
       },
       {
-        img: "../images/Combo1525.jpg",
-        alt: "Standard dial lock, circular with a key sticking out the back",
+        img: "../images/Electronic4400EC.jpg",
+        alt: "Electronic lock, bluetooth",
       },
       {
-        img: "../images/Combo1630.jpg",
-        alt: "Dial lock with a keyhole on the front, deadbolt sticking out the side",
-      },
-      {
-        img: "../images/Combo3670.jpg",
-        alt: "3 combination lock, contains a keyhole on the front, deadbolt sticking out the side",
-      },
-      {
-        img: "../images/Combo1174.jpg",
-        alt: "Bulkier lock, has 5 combinations on the bottom covered by rubber.",
+        img: "../images/Electronic5441EC.jpg",
+        alt: "Electronic lock, numbers 0 to 9 for password, no shackle(wall mounted)",
       },
       {
         special: true,
-        img: "../images/Combo1502GRN.jpg",
-        alt: "Standard dial lock, green and circular",
+        img: "../images/Electronic6400ENT.jpg",
+        alt: "Electronic lock, keypad 0 to 9 for password",
+      },
+      {
+        img: "../images/Electronic6400LJENT.jpg",
+        alt: "Electronic lock, keypad 0 to 9 for password, longer shackle",
+      },
+      {
+        img: "../images/ElectronicD1000.png",
+        alt: "Electronic lock, keypad 0 to 9, sleeker finish, deadbolt",
       }
     ]
   }
