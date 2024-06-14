@@ -25,8 +25,9 @@ function BSCarousel(carousel) {
     <>
       <div>
         <div id={id} className={`carousel slide ${ fade ? "carousel-fade": ""}`}>
-          {indicators === true ? <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          {indicators === true ? <div className="carousel-indicators">
+            {/* Not sure how to make the indicators clickable to send them. Considering that, I might remove the onhover select thing. */}
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
