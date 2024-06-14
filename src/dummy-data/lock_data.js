@@ -41,28 +41,28 @@ const lock = {
       {
         active: true,
         img: "../images/Combo1500KA.jpg",
-        alt: "",
+        alt: "Standard dial lock, circular",
       },
       {
         img: "../images/Combo1525.jpg",
-        alt: "",
+        alt: "Standard dial lock, circular with a key sticking out the back",
       },
       {
         img: "../images/Combo1630.jpg",
-        alt: "",
+        alt: "Dial lock with a keyhole on the front, deadbolt sticking out the side",
       },
       {
         img: "../images/Combo3670.jpg",
-        alt: "",
+        alt: "3 combination lock, contains a keyhole on the front, deadbolt sticking out the side",
       },
       {
         img: "../images/Combo1174.jpg",
-        alt: "",
+        alt: "Bulkier lock, has 5 combinations on the bottom covered by rubber.",
       },
       {
         special: true,
         img: "../images/Combo1502GRN.jpg",
-        alt: "",
+        alt: "Standard dial lock, green and circular",
       }
     ]
   },
@@ -70,7 +70,34 @@ const lock = {
   bootstrapCarouselFade: {
     id: "third",
     fade: true,
-
+    lockData: [
+      {
+        active: true,
+        img: "../images/Combo1500KA.jpg",
+        alt: "Standard dial lock, circular",
+      },
+      {
+        img: "../images/Combo1525.jpg",
+        alt: "Standard dial lock, circular with a key sticking out the back",
+      },
+      {
+        img: "../images/Combo1630.jpg",
+        alt: "Dial lock with a keyhole on the front, deadbolt sticking out the side",
+      },
+      {
+        img: "../images/Combo3670.jpg",
+        alt: "3 combination lock, contains a keyhole on the front, deadbolt sticking out the side",
+      },
+      {
+        img: "../images/Combo1174.jpg",
+        alt: "Bulkier lock, has 5 combinations on the bottom covered by rubber.",
+      },
+      {
+        special: true,
+        img: "../images/Combo1502GRN.jpg",
+        alt: "Standard dial lock, green and circular",
+      }
+    ]
   }
 
 }
