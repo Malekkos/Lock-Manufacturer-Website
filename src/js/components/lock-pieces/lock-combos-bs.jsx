@@ -27,12 +27,13 @@ function BSCarousel(carousel) {
         <div id={id} className={`carousel slide ${ fade ? "carousel-fade": ""}`}>
           {indicators === true ? <div className="carousel-indicators">
             {/* Not sure how to make the indicators clickable to send them. Considering that, I might remove the onhover select thing. */}
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            {/* Also, setting a style here. The preset componenet has a preset styling that also has precendence. Maybe I'll revisit and try some things, but this works for now. Just not DRY, is all */}
+            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
           </div> : null}
           <div className="carousel-inner">
             {lockData.map((item, key) => {

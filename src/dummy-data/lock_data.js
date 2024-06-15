@@ -95,7 +95,7 @@ const lock = {
       },
       {
         img: "../images/ElectronicD1000.png",
-        alt: "Electronic lock, keypad 0 to 9, sleeker finish, deadbolt",
+        alt: "Electronic lock, keypad 0 to 9, sleeker black finish, deadbolt",
       }
     ]
   }
