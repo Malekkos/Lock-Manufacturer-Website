@@ -21,10 +21,11 @@ import React from "react";
 
 function BSCarousel(carousel) {
   const { id, lockData, indicators, fade, name } = carousel.carousel;
+
   return (
     <>
       <div>
-        <header>{name}</header>
+      <header>{name}</header>
         <div id={id} className={`carousel slide ${ fade ? "carousel-fade": ""}`}>
           {indicators === true ? <div className="carousel-indicators">
             {/* Not sure how to make the indicators clickable to send them. Considering that, I might remove the onhover select thing. */}
