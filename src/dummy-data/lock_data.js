@@ -4,6 +4,7 @@ const lock = {
 
   bootstrapCarousel: {
     id: "first",
+    name: "Padlocks",
     lockData: [
       {
         active: true,
@@ -36,6 +37,7 @@ const lock = {
   //need to change indicator color, kinda invisible
   bootstrapCarouselIndicators: {
     id: "second",
+    name: "Combination Locks",
     indicators: true,
     lockData: [
       {
@@ -69,6 +71,7 @@ const lock = {
 
   bootstrapCarouselFade: {
     id: "third",
+    name: "Electronic Locks",
     fade: true,
     lockData: [
       {
