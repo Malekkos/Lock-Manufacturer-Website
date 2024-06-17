@@ -214,9 +214,9 @@ $maincolor: #2AABBD;
 }
 
 .orgContainer {
-  position: absolute;
-  width: 25rem;
+  width: 80%;
   height: 200px;
+  position: absolute;
   top: 46rem;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -225,7 +225,7 @@ $maincolor: #2AABBD;
 
 .orgContainerData {
   @include row-flex-rules();
-  width: 150rem;
+  pointer-events: none;
   gap: 10px;
   position: absolute;
   top: 0;
@@ -235,6 +235,11 @@ $maincolor: #2AABBD;
 .card {
   @include column-flex-rules();
   width: 17rem;
+  height: 3rem;
+  // border-radius: 5px;
+  background: none;
+  border: none;
+  // background-color: lightgray;
 }
 
 #cardBody {

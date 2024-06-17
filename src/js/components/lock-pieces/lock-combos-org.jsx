@@ -25,6 +25,12 @@ function OrgCarousel() {
     let startX;
     let x;
 
+    console.log("this is the container: ", container)
+    console.log("this is the inner container: ", innerContainer)
+    console.log("this is pressed: ", pressed)
+    console.log("this is startX: ", startX)
+    console.log("this is X: ", x)
+
     let boundItems = () => {
       let outer = container.getBoundingClientRect();
       let inner = innerContainer.getBoundingClientRect();
@@ -39,12 +45,14 @@ function OrgCarousel() {
     }
 
     container.addEventListener("mousedown", (event) => {
+      console.log("Mousedown")
       pressed = true;
       startX = event.offsetX - innerContainer.offsetLeft;
       container.style.cursor = "grabbing";
     });
 
     container.addEventListener("mouseenter", () => {
+      console.log("Mouseentered")
       container.style.cursor = "grab";
     });
 
@@ -66,6 +74,12 @@ function OrgCarousel() {
   return (
     <div className="orgContainer">
       <div className="orgContainerData">
+        {/* <div className="card">aa</div> */}
+        {/* <div className="card">aa</div> */}
+        {/* <div className="card">aa</div> */}
+        {/* <div className="card">aa</div> */}
+        {/* <div className="card">aa</div> */}
+        {/* <div className="card">aa</div> */}
         <LockCard data="" />
         <LockCard data="" />
         <LockCard data="" />
