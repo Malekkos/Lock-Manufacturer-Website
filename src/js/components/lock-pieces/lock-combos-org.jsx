@@ -14,14 +14,14 @@ import LockCard from "./lock-card";
 
 function OrgCarousel() {
   return (
-    <div class="orgContainer">
-      <div>
+    <div className="orgContainer">
+      <div className="orgContainerData">
         <LockCard data="" />
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+        <LockCard data="" />
+        <LockCard data="" />
+        <LockCard data="" />
+        <LockCard data="" />
+        <LockCard data="" />
       </div>
     </div>
   )

@@ -108,13 +108,13 @@ $maincolor: #2AABBD;
 
   justify-content: space-evenly;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 20rem;
   align-items: center;
   z-index: 1;
   position: absolute;
   top: 20rem;
   width: 45rem;
-  height: 80rem;
+  // height: 80rem;
   background-color: #dfdffa;
   opacity: 1;
   background: {
@@ -213,8 +213,32 @@ $maincolor: #2AABBD;
 
 }
 
+.orgContainer {
+  position: absolute;
+  width: 20rem;
+  height: 200px;
+  top: 46rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.orgContainerData {
+  @include row-flex-rules();
+
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .card {
+  @include column-flex-rules();
   width: 17rem;
+}
+
+#cardBody {
+  
 }
 
 //////////////////////////////////////////////////
