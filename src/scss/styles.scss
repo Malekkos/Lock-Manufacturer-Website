@@ -22,7 +22,7 @@ $maincolor: #2AABBD;
 //DESC: Defining the flow of the page and background.
 #root {
   @include column-flex-rules();
-
+  user-select: none;
   width: $maxwidth;
   height: 130rem;
   background-color: $backgroundcolor;
@@ -48,6 +48,7 @@ $maincolor: #2AABBD;
     height: 20rem;
     width: 20rem;
     color: #cdcdcd;
+
     border: {
       color: #c0c0c0;
       style: solid;
@@ -117,6 +118,7 @@ $maincolor: #2AABBD;
   // height: 80rem;
   background-color: #dfdffa;
   opacity: 1;
+
   background: {
     image: linear-gradient(0deg, #dfdffa 57%, #b6b6cc 43%);
     size: 33px 6px;
@@ -242,9 +244,7 @@ $maincolor: #2AABBD;
   // background-color: lightgray;
 }
 
-#cardBody {
-  
-}
+#cardBody {}
 
 //////////////////////////////////////////////////
 @media screen and (max-width: 1129px) {
