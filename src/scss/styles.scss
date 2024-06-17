@@ -24,7 +24,7 @@ $maincolor: #2AABBD;
   @include column-flex-rules();
 
   width: $maxwidth;
-  height: 150vh;
+  height: 130rem;
   background-color: $backgroundcolor;
 }
 
@@ -114,7 +114,7 @@ $maincolor: #2AABBD;
   position: absolute;
   top: 20rem;
   width: 45rem;
-  height: 45rem;
+  height: 80rem;
   background-color: #dfdffa;
   opacity: 1;
   background: {
@@ -211,6 +211,10 @@ $maincolor: #2AABBD;
     justify-content: end;
   }
 
+}
+
+.card {
+  width: 17rem;
 }
 
 //////////////////////////////////////////////////

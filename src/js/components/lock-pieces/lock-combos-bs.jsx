@@ -6,9 +6,7 @@ import React from "react";
   padlocks
   combination locks
   electronic locks
-  lock box & safe
-  door hardware
-  Accessories
+
  */
 
 /*
