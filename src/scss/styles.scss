@@ -115,7 +115,7 @@ $maincolor: #2AABBD;
   position: absolute;
   top: 20rem;
   width: 45rem;
-  // height: 80rem;
+  height: calc(100% + 8rem);
   background-color: #dfdffa;
   opacity: 1;
 
@@ -216,11 +216,13 @@ $maincolor: #2AABBD;
 }
 
 .orgContainer {
+  min-height: 13rem;
+  display: flex;
+  justify-self: center;
   width: 80%;
-  height: 200px;
-  position: absolute;
-  top: 46rem;
-  left: 50%;
+  position: relative;
+  top: 7rem;
+  left: 43%;
   transform: translate(-50%, -50%);
   overflow: hidden;
 }
@@ -238,13 +240,17 @@ $maincolor: #2AABBD;
   @include column-flex-rules();
   width: 17rem;
   height: 3rem;
-  // border-radius: 5px;
   background: none;
   border: none;
-  // background-color: lightgray;
 }
 
-#cardBody {}
+#cardBody {
+
+
+  .btn {
+    pointer-events: all;
+  }
+}
 
 //////////////////////////////////////////////////
 @media screen and (max-width: 1129px) {
