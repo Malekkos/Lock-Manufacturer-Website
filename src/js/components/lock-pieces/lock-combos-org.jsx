@@ -76,12 +76,12 @@ function OrgCarousel() {
         {/* <div className="card">aa</div> */}
         {/* <div className="card">aa</div> */}
         {/* <div className="card">aa</div> */}
-        <LockCard data="" />
-        <LockCard data="" />
-        <LockCard data="" />
-        <LockCard data="" />
-        <LockCard data="" />
-        <LockCard data="" />
+        <LockCard cardData="" />
+        <LockCard cardData="" />
+        <LockCard cardData="" />
+        <LockCard cardData="" />
+        <LockCard cardData="" />
+        <LockCard cardData="" />
       </div>
     </div>
   )

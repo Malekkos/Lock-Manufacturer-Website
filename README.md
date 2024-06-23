@@ -55,3 +55,10 @@ Demo website with the main focus being learning<br />
     Super cool ideas with the parent selector. Maybe when you hover an carousel item, can change the parent element to be like a transition or something and have a neat little animation run<br />
     For instance, hover a normal item and change the border of the parent to be a different color. Then, when you hover the on-sale item or what ever it will be called, you could have the parent element actually like do a cool animation of it moving something.
 </details>
+
+<details>
+  <summary>When finished, remove node_modules</summary>
+  REFERNCE: https://stackoverflow.com/questions/50675829/remove-node-modules-from-git-in-vscode<br />
+  Received feedback from a developer that its bad practice & kinda stupid to include node_modules in the pushed result. This is because if you fork it, your gonna npm install anyways<br />
+  Guide here is describing how to remove it, theres a few different options
+</details>
