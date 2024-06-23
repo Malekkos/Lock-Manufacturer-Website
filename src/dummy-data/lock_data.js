@@ -107,28 +107,28 @@ const lock = {
 
     lockData: [
       {
-        img: "../images/",
+        img: "../images/lockboxBlack.png",
         alt: "",
       },
       {
-        img: "../images/",
+        img: "../images/LockboxRed.jpg",
         alt: "",
       },
       {
-        img: "../images/",
+        img: "../images/LockboxSilverNumbers.jpg",
         alt: "",
       },
       {
-        img: "../images/",
+        img: "../images/SafeBlackTurn.jpg",
         alt: "",
       },
       {
         special: true,
-        img: "../images/",
+        img: "../images/SafePinkTurn.jpg",
         alt: "",
       },
       {
-        img: "../images/",
+        img: "../images/SafeSilverTurn.jpg",
         alt: "",
       },
     ]
