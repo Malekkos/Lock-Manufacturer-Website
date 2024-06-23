@@ -12,8 +12,11 @@ import LockCard from "./lock-card";
 // cont.    other could be a carousel containing cards. Will likely need its own
 // cont.    component for the card, because its a large element field.
 
-function OrgCarousel() {
+function OrgCarousel(lockData) {
+  // console.log(carousel.carousel)
   // The following animation work is from this posting: https://medium.com/@zenab.awada/creating-a-draggable-carousel-using-javascript-a84337110808
+  const { carousel } = lockData
+  // console.log(carousel)
 
   window.onload = function () {
     let container = document.querySelectorAll(".orgContainer")
@@ -71,12 +74,20 @@ function OrgCarousel() {
   return (
     <div className="orgContainer">
       <div className="orgContainerData">
+        {
+          carousel.map((ele, key) => {
+            console.log(ele.img)
+            return (
+              <LockCard key={key} img={ele.img} alt={ele.alt} />
+            )
+          })
+        }
+        {/* <LockCard cardData="" />
         <LockCard cardData="" />
         <LockCard cardData="" />
         <LockCard cardData="" />
         <LockCard cardData="" />
-        <LockCard cardData="" />
-        <LockCard cardData="" />
+        <LockCard cardData="" /> */}
       </div>
     </div>
   )

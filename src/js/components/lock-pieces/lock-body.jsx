@@ -16,9 +16,9 @@ function Body() {
         <BSCarousel carousel={lock.bootstrapCarousel} />
         <BSCarousel carousel={lock.bootstrapCarouselIndicators} />
         <BSCarousel carousel={lock.bootstrapCarouselFade} />
-        <OrgCarousel carousel={lock.originalCarouselBoxSafe} />
-        <OrgCarousel carousel={lock.originalCarouselDoorHardware} />
-        <OrgCarousel carousel={lock.originalCarouselAccessories} />
+        <OrgCarousel carousel={lock.originalCarouselBoxSafe.lockData} />
+        <OrgCarousel carousel={lock.originalCarouselDoorHardware.lockData} />
+        <OrgCarousel carousel={lock.originalCarouselAccessories.lockData} />
       </div>
     </>
   )
