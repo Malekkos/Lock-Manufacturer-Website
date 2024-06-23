@@ -18,53 +18,59 @@ function OrgCarousel() {
 
 
   window.onload = function () {
-    let container = document.querySelector(".orgContainer")
+    let container = document.querySelectorAll(".orgContainer")
     let innerContainer = document.querySelector(".orgContainerData")
 
     let pressed = false;
     let startX;
     let x;
+    console.log(container)
+    
 
-    let boundItems = () => {
-      let outer = container.getBoundingClientRect();
-      let inner = innerContainer.getBoundingClientRect();
-
-      if (parseInt(innerContainer.style.left) > 0) {
-        innerContainer.style.left = "0px";
+    container.forEach(element => {
+      let boundItems = () => {
+        let outer = element.getBoundingClientRect();
+        let inner = element.firstChild.getBoundingClientRect();
+  
+        if (parseInt(element.firstChild.style.left) > 0) {
+          element.firstChild.style.left = "0px";
+        }
+  
+        if (inner.right < outer.right) {
+          element.firstChild.style.left = `-${inner.width - outer.width}px`
+        }
       }
-
-      if (inner.right < outer.right) {
-        innerContainer.style.left = `-${inner.width - outer.width}px`
-      }
-    }
-
-    container.addEventListener("mousedown", (event) => {
-      pressed = true;
-      startX = event.offsetX - innerContainer.offsetLeft;
-      container.style.cursor = "grabbing";
+      console.log(element.firstChild)
+      let innerContainerLocal = element.firstChild
+      element.addEventListener("mousedown", (event) => {
+        pressed = true;
+        startX = event.offsetX - innerContainerLocal.offsetLeft;
+        element.style.cursor = "grabbing";
+      });
+  
+      element.addEventListener("mouseenter", () => {
+        element.style.cursor = "grab";
+      });
+  
+      element.addEventListener("mouseup", () => {
+        element.style.cursor = "grab";
+        pressed = false;
+      });
+  
+      element.addEventListener("mouseleave", () => {
+        pressed = false;
+      })
+  
+      element.addEventListener("mousemove", (event) => {
+        if (!pressed) return;
+        event.preventDefault();
+  
+        x = event.offsetX;
+        innerContainerLocal.style.left = `${x - startX}px`;
+        boundItems();
+      });
     });
-
-    container.addEventListener("mouseenter", () => {
-      container.style.cursor = "grab";
-    });
-
-    container.addEventListener("mouseup", () => {
-      container.style.cursor = "grab";
-      pressed = false;
-    });
-
-    container.addEventListener("mouseleave", () => {
-      pressed = false;
-    })
-
-    container.addEventListener("mousemove", (event) => {
-      if (!pressed) return;
-      event.preventDefault();
-
-      x = event.offsetX;
-      innerContainer.style.left = `${x - startX}px`;
-      boundItems();
-    });
+    
   }
 
   return (

@@ -115,7 +115,7 @@ $maincolor: #2AABBD;
   position: absolute;
   top: 20rem;
   width: 45rem;
-  height: calc(100% + 8rem);
+  height: calc(100% + 36rem);
   background-color: #dfdffa;
   opacity: 1;
 
@@ -225,6 +225,7 @@ $maincolor: #2AABBD;
   left: 43%;
   transform: translate(-50%, -50%);
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 .orgContainerData {

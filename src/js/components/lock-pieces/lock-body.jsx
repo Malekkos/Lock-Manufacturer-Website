@@ -16,9 +16,9 @@ function Body() {
         <BSCarousel carousel={lock.bootstrapCarousel} />
         <BSCarousel carousel={lock.bootstrapCarouselIndicators} />
         <BSCarousel carousel={lock.bootstrapCarouselFade} />
-        {/* <OrgCarousel /> */}
         <OrgCarousel />
-        {/* <OrgCarousel /> */}
+        <OrgCarousel />
+        <OrgCarousel />
       </div>
     </>
   )
