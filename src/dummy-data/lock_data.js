@@ -101,8 +101,100 @@ const lock = {
         alt: "Electronic lock, keypad 0 to 9, sleeker black finish, deadbolt",
       }
     ]
-  }
+  },
 
+  originalCarouselBoxSafe: {
+
+    lockData: [
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        special: true,
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+    ]
+  },
+  
+  originalCarouselDoorHardware: {
+
+    lockData: [
+      {
+        special: true,
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+    ]
+  },
+
+  originalCarouselAccessories: {
+
+    lockData: [
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        special: true,
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+      {
+        img: "../images/",
+        alt: "",
+      },
+    ]
+  },
 }
 
 export default lock

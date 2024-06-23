@@ -3,6 +3,7 @@ import React from "react"
 
 function LockCard(cardData) {
 
+  const { } = cardData
 
   return (
     <div className="card">
