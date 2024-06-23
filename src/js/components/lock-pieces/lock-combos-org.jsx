@@ -15,15 +15,12 @@ import LockCard from "./lock-card";
 function OrgCarousel() {
   // The following animation work is from this posting: https://medium.com/@zenab.awada/creating-a-draggable-carousel-using-javascript-a84337110808
 
-
-
   window.onload = function () {
     let container = document.querySelectorAll(".orgContainer")
 
     let pressed = false;
     let startX;
     let x;
-
 
     container.forEach(element => {
       let innerContainerLocal = element.firstChild
@@ -69,18 +66,11 @@ function OrgCarousel() {
         boundItems();
       });
     });
-
   }
 
   return (
     <div className="orgContainer">
       <div className="orgContainerData">
-        {/* <div className="card">aa</div> */}
-        {/* <div className="card">aa</div> */}
-        {/* <div className="card">aa</div> */}
-        {/* <div className="card">aa</div> */}
-        {/* <div className="card">aa</div> */}
-        {/* <div className="card">aa</div> */}
         <LockCard cardData="" />
         <LockCard cardData="" />
         <LockCard cardData="" />
