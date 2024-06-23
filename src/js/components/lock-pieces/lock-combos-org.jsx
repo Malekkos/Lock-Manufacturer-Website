@@ -76,18 +76,11 @@ function OrgCarousel(lockData) {
       <div className="orgContainerData">
         {
           carousel.map((ele, key) => {
-            console.log(ele.img)
             return (
               <LockCard key={key} img={ele.img} alt={ele.alt} />
             )
           })
         }
-        {/* <LockCard cardData="" />
-        <LockCard cardData="" />
-        <LockCard cardData="" />
-        <LockCard cardData="" />
-        <LockCard cardData="" />
-        <LockCard cardData="" /> */}
       </div>
     </div>
   )

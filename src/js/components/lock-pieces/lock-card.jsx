@@ -4,8 +4,6 @@ import React from "react"
 function LockCard(cardData) {
 
   const { img, alt } = cardData
-  console.log("this is the img:", img)
-  console.log("this is the alt:", alt)
   return (
     <div className="card">
       <img src={img} className="card-img-top" alt={alt} />
