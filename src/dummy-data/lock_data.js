@@ -108,44 +108,44 @@ const lock = {
     lockData: [
       {
         img: "../images/lockboxBlack.png",
-        alt: "",
-        title: "",
-        description: "",
+        alt: "Black lockbox, sharp edges, latch unlock, handle",
+        title: "LB6600 Blackbird",
+        description: "Matte black Lockbox, sharp corners modeling a Blackbird jet. Forces exceeding 7g's not covered",
       },
       {
         img: "../images/LockboxRed.jpg",
-        alt: "",
-        title: "",
-        description: "",
+        alt: "Red lockbox, round edges, key unlock, handle",
+        title: "LB790 Marilyn's Lipstick",
+        description: "Glossy and Bossy, this bright red Lockbox has all the fashion of the 1950's star herself",
       },
       {
         img: "../images/LockboxSilverNumbers.jpg",
-        alt: "",
-        title: "",
-        description: "",
+        alt: "Silver lockbox, in-wall variant, number passcode",
+        title: "IW940 Silver Surfer",
+        description: "Even Doctor Doom couldn't scratch this in-wall Lockbox! The rest of the building though...",
       },
       {
         img: "../images/SafeBlackTurn.jpg",
-        alt: "",
-        title: "",
-        description: "",
+        alt: "Black safe, sharp corners, wheel turn unlock",
+        title: "S7180 Black Coffee",
+        description: "A noir detective staple, this black safe is great for holding criminal records and looking good doing it",
       },
       {
         special: true,
         img: "../images/SafePinkTurn.jpg",
-        alt: "",
-        title: "",
-        description: "",
+        alt: "Pink safe, sharp corners, double dial unlock",
+        title: "S8180 Starpower",
+        description: "This Power Puff Girls Exclusive is perfect for hiding all the bill statements from destroing the city!",
       },
       {
         img: "../images/SafeSilverTurn.jpg",
-        alt: "",
-        title: "",
-        description: "",
+        alt: "Silver safe, sharp corners, single dial unlock",
+        title: "S330 Classic",
+        description: "Dull, drab, but gets the job done. A reliable safe for the every day man",
       },
     ]
   },
-  
+
   originalCarouselDoorHardware: {
 
     lockData: [

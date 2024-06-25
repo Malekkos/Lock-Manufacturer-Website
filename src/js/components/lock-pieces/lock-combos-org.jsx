@@ -77,7 +77,7 @@ function OrgCarousel(lockData) {
         {
           carousel.map((ele, key) => {
             return (
-              <LockCard key={key} img={ele.img} alt={ele.alt} />
+              <LockCard key={key} img={ele.img} alt={ele.alt} title={ele.title} description={ele.description}/>
             )
           })
         }

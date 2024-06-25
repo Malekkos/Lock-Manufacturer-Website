@@ -252,7 +252,9 @@ $maincolor: #2AABBD;
 
 #cardBody {
 
-
+  .card-text {
+    font-size: 0.9rem;
+  }
   .btn {
     pointer-events: all;
   }
