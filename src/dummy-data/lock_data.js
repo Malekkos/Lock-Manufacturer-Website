@@ -109,27 +109,39 @@ const lock = {
       {
         img: "../images/lockboxBlack.png",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/LockboxRed.jpg",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/LockboxSilverNumbers.jpg",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/SafeBlackTurn.jpg",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         special: true,
         img: "../images/SafePinkTurn.jpg",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/SafeSilverTurn.jpg",
         alt: "",
+        title: "",
+        description: "",
       },
     ]
   },
@@ -141,26 +153,38 @@ const lock = {
         special: true,
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
     ]
   },
@@ -171,27 +195,39 @@ const lock = {
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         special: true,
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
       {
         img: "../images/",
         alt: "",
+        title: "",
+        description: "",
       },
     ]
   },
