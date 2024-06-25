@@ -151,37 +151,37 @@ const lock = {
     lockData: [
       {
         special: true,
-        img: "../images/",
+        img: "../images/StandardBrass.jpg",
         alt: "",
         title: "",
         description: "",
       },
       {
-        img: "../images/",
+        img: "../images/StandardSilver.jpg",
         alt: "",
         title: "",
         description: "",
       },
       {
-        img: "../images/",
+        img: "../images/StandardBlack.jpg",
         alt: "",
         title: "",
         description: "",
       },
       {
-        img: "../images/",
+        img: "../images/DeadboltBrass.jpg",
         alt: "",
         title: "",
         description: "",
       },
       {
-        img: "../images/",
+        img: "../images/DeadboltSilver.jpg",
         alt: "",
         title: "",
         description: "",
       },
       {
-        img: "../images/",
+        img: "../images/DeadboltBlack.jpg",
         alt: "",
         title: "",
         description: "",
