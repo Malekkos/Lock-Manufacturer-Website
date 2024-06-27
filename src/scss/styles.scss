@@ -216,12 +216,12 @@ $maincolor: #2AABBD;
 }
 
 .orgContainer {
-  min-height: 19rem;
+  min-height: 20rem;
   display: flex;
   justify-self: center;
   width: 80%;
   position: relative;
-  top: 9rem;
+  top: 12rem;
   left: 43%;
   transform: translate(-50%, -50%);
   overflow: hidden;
@@ -249,18 +249,39 @@ $maincolor: #2AABBD;
   height: 8rem;
   border-style: solid;
   border-bottom-style: none;
-  padding: 0rem 0.4rem;
+  border-width: 2px;
+  border-color: $backgroundcolor;
+  border-start-end-radius: 15%;
+  border-end-start-radius: 15%;
 }
 
 #cardBody {
+  @include column-flex-rules();
   border-style: solid ;
-  border-top: none;
+  border-start-start-radius: 15%;
+  border-end-end-radius: 15%;
+  border-width: 2px;
+  border-color: $backgroundcolor;
+  background-color: $maincolor;
+  color: white;
+  justify-content: space-between;
 
   .card-text {
     font-size: 0.9rem;
+    text-align: center;
+    color: whitesmoke
   }
+
   .btn {
     pointer-events: all;
+    background-color: $backgroundcolor;
+    border-color:#BD3C2A;
+    border-width: 1.6px;
+    transition: 0.5s ease-in-out background-color;
+  }
+
+  .btn:hover {
+    background-color: #BD3C2A;
   }
 }
 
