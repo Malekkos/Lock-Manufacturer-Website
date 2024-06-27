@@ -115,7 +115,7 @@ $maincolor: #2AABBD;
   position: absolute;
   top: 20rem;
   width: 45rem;
-  height: calc(100% + 36rem);
+  height: calc(100% + 59rem);
   background-color: #dfdffa;
   opacity: 1;
 
@@ -233,14 +233,13 @@ $maincolor: #2AABBD;
   pointer-events: none;
   gap: 10px;
   position: absolute;
-  top: 0;
-  left: 0;
+  height: 20rem;
 }
 
 .card {
   @include column-flex-rules();
   width: 17rem;
-  height: 3rem;
+  height: 20rem;
   background: none;
   border: none;
 }
@@ -248,9 +247,14 @@ $maincolor: #2AABBD;
 .card-img-top {
   width: 12rem;
   height: 8rem;
+  border-style: solid;
+  border-bottom-style: none;
+  padding: 0rem 0.4rem;
 }
 
 #cardBody {
+  border-style: solid ;
+  border-top: none;
 
   .card-text {
     font-size: 0.9rem;
