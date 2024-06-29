@@ -16,7 +16,6 @@ function OrgCarousel(lockData) {
   // console.log(carousel.carousel)
   // The following animation work is from this posting: https://medium.com/@zenab.awada/creating-a-draggable-carousel-using-javascript-a84337110808
   const { carousel } = lockData
-  // console.log(carousel)
 
   window.onload = function () {
     let container = document.querySelectorAll(".orgContainer")
@@ -26,7 +25,6 @@ function OrgCarousel(lockData) {
     let startX;
     let x;
 
-    console.log(buttons)
     container.forEach(element => {
       let innerContainerLocal = element.firstChild
 
@@ -47,9 +45,6 @@ function OrgCarousel(lockData) {
         pressed = true;
         startX = event.offsetX - innerContainerLocal.offsetLeft;
         element.style.cursor = "grabbing";
-        buttons.forEach(button => {
-          button.style.opacity = 0
-        })
       });
 
       element.addEventListener("mouseenter", () => {
@@ -59,9 +54,6 @@ function OrgCarousel(lockData) {
       element.addEventListener("mouseup", () => {
         element.style.cursor = "grab";
         pressed = false;
-        buttons.forEach(button => {
-          button.style.opacity = 1
-        })
       });
 
       element.addEventListener("mouseleave", () => {
@@ -69,12 +61,20 @@ function OrgCarousel(lockData) {
       })
 
       element.addEventListener("mousemove", (event) => {
-        if (!pressed) return;
-        event.preventDefault();
+        if (!pressed) {
+        buttons.forEach(button => {
+          button.style.pointerEvents = "all"
+        })
+          return;
+        }
+          event.preventDefault();
 
         x = event.offsetX;
         innerContainerLocal.style.left = `${x - startX}px`;
         boundItems();
+        buttons.forEach(button => {
+          button.style.pointerEvents = "none"
+        })
       });
     });
   }
