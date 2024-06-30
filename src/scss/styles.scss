@@ -285,6 +285,35 @@ $maincolor: #2AABBD;
   }
 }
 
+
+#nav-container {
+  @include column-flex-rules();
+  z-index: 100;
+  float: right;
+  position: fixed;
+  padding-left: 90%;
+
+  .ddbutton {
+    z-index: 99;
+  }
+  
+  .ddcontent {
+    display: none;
+    position: absolute;
+    right: 0;
+  }
+
+  .ddcontent a {
+    padding-top: 1.5rem;
+    display: block;
+    background-color: white;
+  }
+
+  .show {
+    display: block;
+  }
+}
+
 //////////////////////////////////////////////////
 @media screen and (max-width: 1129px) {
 
