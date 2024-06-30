@@ -11,8 +11,8 @@ function Nav() {
     <div id="nav-container">
       <button onClick={() => drop()} className="ddbutton">≡</button>
       <div id="dd" className="ddcontent">
-        <a href="#">Home</a>
-        <a href="#">Cart</a>
+        <a href="/">Home</a>
+        <a href="/cart">Cart</a>
       </div>
     </div>
   )
