@@ -1,6 +1,5 @@
 import React from "react";
 
-// ≡≡
 function Nav() {
 
   const drop = () => {
@@ -11,8 +10,8 @@ function Nav() {
     <div id="nav-container">
       <button onClick={() => drop()} className="ddbutton">≡</button>
       <div id="dd" className="ddcontent">
-        <a href="/">Home</a>
-        <a href="/cart">Cart</a>
+        <a id="homeNav" className="navLink" href="/" alt="Home">Home</a>
+        <a id="cartNav" className="navLink" href="/cart" alt="Cart" >🛒</a>
       </div>
     </div>
   )

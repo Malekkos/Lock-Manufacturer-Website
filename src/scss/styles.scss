@@ -304,13 +304,16 @@ $maincolor: #2AABBD;
   }
 
   .ddcontent a {
+    text-decoration: none;
+    @include column-flex-rules();
     padding-top: 1.5rem;
-    display: block;
     background-color: white;
+    width: 2.7rem
   }
 
   .show {
-    display: block;
+    @include column-flex-rules();
+    
   }
 }
 
