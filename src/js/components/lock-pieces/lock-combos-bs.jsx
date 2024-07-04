@@ -24,36 +24,31 @@ function BSCarousel(carousel) {
   const navigate = useNavigate();
 
   const onClick = (event) => {
-    console.log(event.target.id)
     navigate(`/items/${event.target.id}`)
   }
 
   return (
     <>
       <div>
-      <header>{name}</header>
-        <div id={id} className={`carousel slide ${ fade ? "carousel-fade": ""}`}>
+        <header>{name}</header>
+        <div id={id} className={`carousel slide ${fade ? "carousel-fade" : ""}`}>
           {indicators === true ? <div className="carousel-indicators">
-            {/* Not sure how to make the indicators clickable to send them. Considering that, I might remove the onhover select thing. */}
-            {/* Also, setting a style here. The preset componenet has a preset styling that also has precendence. Maybe I'll revisit and try some things, but this works for now. Just not DRY, is all */}
-            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button style={{backgroundColor: "#E38F83", cursor: "default"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button style={{ backgroundColor: "#E38F83", cursor: "default" }} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+            <button style={{ backgroundColor: "#E38F83", cursor: "default" }} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button style={{ backgroundColor: "#E38F83", cursor: "default" }} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button style={{ backgroundColor: "#E38F83", cursor: "default" }} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button style={{ backgroundColor: "#E38F83", cursor: "default" }} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button style={{ backgroundColor: "#E38F83", cursor: "default" }} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
           </div> : null}
           <div className="carousel-inner">
             {lockData.map((item, key) => {
-              console.log(item)
               let urlPath = []
+
               for (let i = 10; i < item.img.length; i++) {
-                console.log(item.img[i])
-                if(item.img[i] === ".") {
-                  console.log("done!")
+                if (item.img[i] === ".") {
                   urlPath = urlPath.join('')
-                  console.log(urlPath)
-                  return  (
+
+                  return (
                     <div key={key} className={`carousel-item ${item.active ? "active " : ""}${item.special ? "special " : ""}`}>
                       <img src={item.img} id={`${urlPath}`} onClick={(event) => onClick(event)} className="d-block w-100" alt={item.alt} />
                     </div>
