@@ -1,14 +1,46 @@
 import "../scss/styles.scss";
 
-import * as bootstrap from "bootstrap"
 import React from "react";
 import ReactDOM from "react-dom/client"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App"
+import Item from "./components/itemPage";
+import Cart from "./components/cart";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-   <React.StrictMode>
-      <App />
-   </React.StrictMode>
+const router = createBrowserRouter([
+   {
+      path: "*",
+      element: <App />,
+      // loader: rootLoader
+      children: [
+         {
+            path: "items/:name",
+            element: <Item />,
+            loader: async ({ params }) => {
+               console.log(params)
+               return (`/items/${params.name}`)
+            }
+         }, 
+         {
+            path: "cart",
+            element: <Cart />
+         }
+      ]
+   }
+])
+
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+
+   <RouterProvider
+      router={router}
+      fallbackElement={"spinner here"}
+      />
 )
+
+// root.render(
+   // <React.StrictMode>
+   //    <App />
+   // </React.StrictMode>
+// )
