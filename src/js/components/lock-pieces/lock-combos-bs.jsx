@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 // import { Carousel } from "bootstrap";
 // import "bootstrap"
@@ -19,6 +21,12 @@ import React from "react";
 
 function BSCarousel(carousel) {
   const { id, lockData, indicators, fade, name } = carousel.carousel;
+  const navigate = useNavigate();
+
+  const onClick = (event) => {
+    console.log(event.target.id)
+    navigate(`/items/${event.target.id}`)
+  }
 
   return (
     <>
@@ -37,11 +45,23 @@ function BSCarousel(carousel) {
           </div> : null}
           <div className="carousel-inner">
             {lockData.map((item, key) => {
-              return (
-                <div key={key} className={`carousel-item ${item.active ? "active " : ""}${item.special ? "special " : ""}`}>
-                  <img src={item.img} className="d-block w-100" alt={item.alt} />
-                </div>
-              )
+              console.log(item)
+              let urlPath = []
+              for (let i = 10; i < item.img.length; i++) {
+                console.log(item.img[i])
+                if(item.img[i] === ".") {
+                  console.log("done!")
+                  urlPath = urlPath.join('')
+                  console.log(urlPath)
+                  return  (
+                    <div key={key} className={`carousel-item ${item.active ? "active " : ""}${item.special ? "special " : ""}`}>
+                      <img src={item.img} id={`${urlPath}`} onClick={(event) => onClick(event)} className="d-block w-100" alt={item.alt} />
+                    </div>
+                  )
+                } else {
+                  urlPath.push(item.img[i])
+                }
+              }
             })}
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target={`#${id}`} data-bs-slide="prev">
