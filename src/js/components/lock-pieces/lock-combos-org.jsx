@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import LockCard from "./lock-card";
+
+import anim from "../../anim/carousel-org-anim";
+
 /*
   lock box & safe
   door hardware
@@ -13,79 +16,29 @@ import LockCard from "./lock-card";
 // cont.    component for the card, because its a large element field.
 
 function OrgCarousel(lockData) {
-  // console.log(carousel.carousel)
   // The following animation work is from this posting: https://medium.com/@zenab.awada/creating-a-draggable-carousel-using-javascript-a84337110808
   const { carousel } = lockData
 
-  window.onload = function () {
-    let container = document.querySelectorAll(".orgContainer")
-    let buttons = document.querySelectorAll(".btn")
-    
-    let pressed = false;
-    let startX;
-    let x;
+    //THOUGHTS: I really tried to find a solution aside from using useEffect, but I couldn't. I'm sure its there,
+    // cont.    but I just dont understand how to persists the animation between page changes. A simple way to do
+    // cont2.   it would be forcing a screen refresh on return from any other page, but thats pretty janky.
+    //THOUGHTS 2: Did a little more testing, and it seems that when I simply invoke the imported function anim(or just invoke it irregardless,
+    // cont.      no matter where), the container/methods that pull data from the page are actually just returning nothing. Thanks JavaScript!
+    // cont2.     Conversely, when I use useEffect/onload(the first instance), the data is present and happy. Why is this happening? Well, it 
+    // cont3.     could be that the function itself is not getting exposed to the DOM, and DOM manipulators like useEffect enable that to happen.
+    // cont4.     To truly fix this issue and not be forced to use useEffect, Research should be directed at how to actually Expose elements to
+    // cont5.     the DOM.
+    useEffect(() => {
+      anim()
+    }, [])
 
-    container.forEach(element => {
-      let innerContainerLocal = element.firstChild
-
-      let boundItems = () => {
-        let outer = element.getBoundingClientRect();
-        let inner = innerContainerLocal.getBoundingClientRect();
-
-        if (parseInt(innerContainerLocal.style.left) > 0) {
-          innerContainerLocal.style.left = "0px";
-        }
-
-        if (inner.right < outer.right) {
-          innerContainerLocal.style.left = `-${inner.width - outer.width}px`
-        }
-      }
-
-      element.addEventListener("mousedown", (event) => {
-        pressed = true;
-        startX = event.offsetX - innerContainerLocal.offsetLeft;
-        element.style.cursor = "grabbing";
-      });
-
-      element.addEventListener("mouseenter", () => {
-        element.style.cursor = "grab";
-      });
-
-      element.addEventListener("mouseup", () => {
-        element.style.cursor = "grab";
-        pressed = false;
-      });
-
-      element.addEventListener("mouseleave", () => {
-        pressed = false;
-      })
-
-      element.addEventListener("mousemove", (event) => {
-        if (!pressed) {
-        buttons.forEach(button => {
-          button.style.pointerEvents = "all"
-        })
-          return;
-        }
-          event.preventDefault();
-
-        x = event.offsetX;
-        innerContainerLocal.style.left = `${x - startX}px`;
-        boundItems();
-        buttons.forEach(button => {
-          button.style.pointerEvents = "none"
-        })
-      });
-    });
-  }
-
-  return (
+    return (
     <div className="orgContainer">
       <div className="orgContainerData">
         {
           carousel.map((ele, key) => {
             return (
-              <LockCard key={key} img={ele.img} alt={ele.alt} title={ele.title} description={ele.description}/>
+              <LockCard key={key} img={ele.img} alt={ele.alt} title={ele.title} description={ele.description} />
             )
           })
         }
