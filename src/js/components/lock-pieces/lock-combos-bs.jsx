@@ -42,24 +42,13 @@ function BSCarousel(carousel) {
           </div> : null}
           <div className="carousel-inner">
             {lockData.map((item, key) => {
-              let urlPath = []
-
-              for (let i = 10; i < item.img.length; i++) {
-                if (item.img[i] === ".") {
-                  urlPath = urlPath.join('')
-
-                  //THOUGHTS: Can be refactored to use slice, I had the realization that not only is the beginning of the 'url' a static length(10 char),
-                  //cont.     the ending part that I want to cut off, eg. the .png/.jpg, are also a static length(4 char). Ultimately, I will decide after
-                  //cont 2.   researching to see which is faster; a slice or a loop
-                  return (
-                    <div key={key} className={`carousel-item ${item.active ? "active " : ""}${item.special ? "special " : ""}`}>
-                      <img src={item.img} id={`${urlPath}`} onClick={(event) => onClick(event)} className="d-block w-100" alt={item.alt} />
-                    </div>
-                  )
-                } else {
-                  urlPath.push(item.img[i])
-                }
-              }
+              //THOUGHTS: refactord to just get static lengths, should be faster. Only issue would be if it grabs something with a file ending not being
+              // cont.    3 chars(so not jpg or png or pdf)
+              return (
+                <div key={key} className={`carousel-item ${item.active ? "active " : ""}${item.special ? "special " : ""}`}>
+                  <img src={item.img} id={`${item.img.slice(10, -4)}`} onClick={(event) => onClick(event)} className="d-block w-100" alt={item.alt} />
+                </div>
+              )
             })}
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target={`#${id}`} data-bs-slide="prev">
