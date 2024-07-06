@@ -16,7 +16,6 @@ import anim from "../../anim/carousel-org-anim";
 // cont.    component for the card, because its a large element field.
 
 function OrgCarousel(lockData) {
-  // The following animation work is from this posting: https://medium.com/@zenab.awada/creating-a-draggable-carousel-using-javascript-a84337110808
   const { carousel } = lockData
 
     //THOUGHTS: I really tried to find a solution aside from using useEffect, but I couldn't. I'm sure its there,
@@ -28,6 +27,7 @@ function OrgCarousel(lockData) {
     // cont3.     could be that the function itself is not getting exposed to the DOM, and DOM manipulators like useEffect enable that to happen.
     // cont4.     To truly fix this issue and not be forced to use useEffect, Research should be directed at how to actually Expose elements to
     // cont5.     the DOM.
+    //THOUGHTS 3: Read the docs on useEffect. Seems like its okay to use with animations because it's effecting the DOM. Cool :)
     useEffect(() => {
       anim()
     }, [])

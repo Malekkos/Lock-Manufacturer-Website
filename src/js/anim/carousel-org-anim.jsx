@@ -2,7 +2,7 @@
 
 
 
-
+  // The following animation work is from this posting: https://medium.com/@zenab.awada/creating-a-draggable-carousel-using-javascript-a84337110808
 function anim  () {
   let container = document.querySelectorAll(".orgContainer")
   let buttons = document.querySelectorAll(".btn")
