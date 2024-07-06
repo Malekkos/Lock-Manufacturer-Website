@@ -2,15 +2,14 @@
 
 
 
-  // The following animation work is from this posting: https://medium.com/@zenab.awada/creating-a-draggable-carousel-using-javascript-a84337110808
-function anim  () {
+// The following animation work is from this posting: https://medium.com/@zenab.awada/creating-a-draggable-carousel-using-javascript-a84337110808
+function anim() {
   let container = document.querySelectorAll(".orgContainer")
   let buttons = document.querySelectorAll(".btn")
 
   let pressed = false;
   let startX;
   let x;
-  console.log("this is the container: ", container)
 
   container.forEach(element => {
     let innerContainerLocal = element.firstChild
@@ -27,7 +26,6 @@ function anim  () {
         innerContainerLocal.style.left = `-${inner.width - outer.width}px`
       }
     }
-    console.log("running anim")
 
     element.addEventListener("mousedown", (event) => {
       pressed = true;

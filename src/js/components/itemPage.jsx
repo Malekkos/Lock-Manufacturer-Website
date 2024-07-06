@@ -10,12 +10,6 @@ function Item () {
   const { name } = useParams();
   const [data, setData] = useState(undefined)
 
-  for (const prop in lock) {
-    // console.log(prop)
-  }
-
-  // console.log("this is the lock: ", lock)
-  console.log("this is the name: ", name)
   return(
     <>
     {

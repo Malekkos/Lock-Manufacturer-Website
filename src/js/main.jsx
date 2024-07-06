@@ -12,13 +12,11 @@ const router = createBrowserRouter([
    {
       path: "*",
       element: <App />,
-      // loader: rootLoader
       children: [
          {
             path: "items/:name",
             element: <Item />,
             loader: async ({ params }) => {
-               console.log(params)
                return (`/items/${params.name}`)
             }
          }, 
